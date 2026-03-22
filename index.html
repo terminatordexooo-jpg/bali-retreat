@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bali Retreat — 8-15 апреля 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C4A265;
+  --gold-light: #D4B87A;
+  --cream: #FAF6F0;
+  --sand: #F0E8DA;
+  --earth: #8B7355;
+  --earth-dark: #5C4A32;
+  --jungle: #2D5016;
+  --jungle-light: #4A7C2E;
+  --ocean: #1A6B7A;
+  --ocean-light: #2A8B9A;
+  --charcoal: #2C2C2C;
+  --warm-white: #FFFCF7;
+  --coral: #D4806B;
+  --temple-red: #A0522D;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grain texture overlay for depth */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--sand); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--earth); }
+html { scrollbar-width: thin; scrollbar-color: var(--gold) var(--sand); }
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1920&h=1080&fit=crop&q=80') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  max-width: none;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    linear-gradient(175deg, rgba(10,28,18,0.88) 0%, rgba(20,42,14,0.78) 30%, rgba(30,56,20,0.72) 60%, rgba(12,52,58,0.82) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero > * { position: relative; z-index: 2; }
+
+.hero-ornament {
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--warm-white);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 span {
+  display: block;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 0.3em;
+  font-weight: 500;
+}
+
+.hero-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--gold-light);
+  margin: 1.5rem 0 0.5rem;
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  max-width: 500px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-stat {
+  text-align: center;
+  color: var(--warm-white);
+}
+
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--gold);
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  opacity: 0.5;
+  animation: float 2s ease-in-out infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ===== NAV ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(44,44,44,0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 1px solid rgba(196,162,101,0.3);
+}
+
+.nav a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover, .nav a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--earth-dark);
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+}
+
+.section-title .ornament {
+  color: var(--gold);
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.section-title p {
+  color: var(--earth);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+}
+
+/* ===== ROUTE MAP ===== */
+.route-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.route-point {
+  background: var(--warm-white);
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  min-width: 180px;
+  box-shadow: 0 4px 20px rgba(196,162,101,0.15);
+}
+
+.route-point h4 {
+  font-size: 1.3rem;
+  color: var(--earth-dark);
+}
+
+.route-point .dates {
+  font-size: 0.85rem;
+  color: var(--earth);
+  margin-top: 0.2rem;
+}
+
+.route-point .nights {
+  display: inline-block;
+  background: var(--gold);
+  color: white;
+  padding: 0.15rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.route-arrow {
+  font-size: 1.8rem;
+  color: var(--gold);
+}
+
+/* ===== TIMELINE / DAYS ===== */
+.days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.day-card {
+  background: var(--warm-white);
+  border-radius: 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--sand);
+  transition: all 0.4s ease;
+}
+
+.day-card:first-child { border-radius: 20px 20px 0 0; }
+.day-card:last-child { border-radius: 0 0 20px 20px; border-bottom: none; }
+
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.day-header:hover { background: var(--sand); }
+
+.day-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.day-number.ubud {
+  background: linear-gradient(135deg, var(--jungle), var(--jungle-light));
+  color: white;
+}
+
+.day-number.transfer {
+  background: linear-gradient(135deg, var(--earth), var(--gold));
+  color: white;
+}
+
+.day-number.chandidasa {
+  background: linear-gradient(135deg, var(--ocean), var(--ocean-light));
+  color: white;
+}
+
+.day-number .num {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.day-number .label {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+}
+
+.day-info { flex: 1; }
+
+.day-info h3 {
+  font-size: 1.4rem;
+  color: var(--earth-dark);
+  line-height: 1.3;
+}
+
+.day-info .day-date {
+  font-size: 0.85rem;
+  color: var(--earth);
+}
+
+.day-location {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.day-location.ubud {
+  background: rgba(45,80,22,0.1);
+  color: var(--jungle);
+}
+
+.day-location.chandidasa {
+  background: rgba(26,107,122,0.1);
+  color: var(--ocean);
+}
+
+.day-location.transfer {
+  background: rgba(139,115,85,0.1);
+  color: var(--earth);
+}
+
+.day-toggle {
+  font-size: 1.5rem;
+  color: var(--gold);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.day-card.open .day-toggle { transform: rotate(180deg); }
+
+.day-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.day-card.open .day-content { max-height: 5000px; }
+
+.day-schedule {
+  padding: 0 2rem 2rem 2rem;
+  margin-left: 30px;
+  border-left: 2px solid var(--sand);
+}
+
+.schedule-item {
+  position: relative;
+  padding: 0.8rem 0 0.8rem 2rem;
+}
+
+.schedule-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 1.2rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: var(--warm-white);
+}
+
+.schedule-item.highlight::before {
+  background: var(--gold);
+}
+
+.schedule-time {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.schedule-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--earth-dark);
+  font-weight: 500;
+}
+
+.schedule-desc {
+  font-size: 0.85rem;
+  color: var(--earth);
+  margin-top: 0.1rem;
+}
+
+.schedule-duration {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: var(--sand);
+  padding: 0.1rem 0.5rem;
+  border-radius: 8px;
+  color: var(--earth);
+  margin-top: 0.2rem;
+}
+
+/* ===== VILLAS ===== */
+.villas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.villa-card {
+  background: var(--warm-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.villa-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.villa-gallery { position: relative; overflow: hidden; }
+
+.villa-gallery-main {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+  position: relative;
+}
+
+.villa-gallery-main:hover { transform: scale(1.02); }
+
+.villa-gallery-main .villa-image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  z-index: 2;
+}
+
+.villa-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+
+.villa-gallery-thumb {
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.villa-gallery-thumb:hover { opacity: 0.8; }
+
+.villa-gallery-count {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  z-index: 3;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s;
+}
+
+.villa-gallery-count:hover { background: rgba(0,0,0,0.9); }
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.lightbox-nav:hover { background: rgba(255,255,255,0.25); }
+.lightbox-prev { left: 1rem; }
+.lightbox-next { right: 1rem; }
+
+.lightbox-counter {
+  color: rgba(255,255,255,0.6);
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.lightbox-thumbs {
+  display: flex;
+  gap: 6px;
+  margin-top: 0.8rem;
+  overflow-x: auto;
+  max-width: 90vw;
+  padding: 0.5rem;
+}
+
+.lightbox-thumb {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+}
+
+.lightbox-thumb.active { opacity: 1; border-color: var(--gold); }
+.lightbox-thumb:hover { opacity: 0.8; }
+
+/* ===== ACTIVITY PHOTOS ===== */
+.activity-photos {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.6rem;
+  padding: 2px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.activity-photos::-webkit-scrollbar { display: none; }
+
+.activity-photo {
+  width: 180px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.activity-photo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.activity-photo-wide {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-top: 0.6rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.activity-photo-wide:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+/* ===== DAY BANNER ===== */
+.day-banner {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 0;
+}
+
+.day-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(transparent, var(--warm-white));
+}
+
+/* ===== ROUTE IMAGES ===== */
+.route-point-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+  border: 3px solid var(--gold);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.villa-body { padding: 1.5rem; }
+
+.villa-body h3 {
+  font-size: 1.4rem;
+  color: var(--earth-dark);
+  margin-bottom: 0.3rem;
+}
+
+.villa-body .villa-sub {
+  font-size: 0.85rem;
+  color: var(--earth);
+  margin-bottom: 1rem;
+}
+
+.villa-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.villa-feature {
+  font-size: 0.75rem;
+  background: var(--sand);
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  color: var(--earth-dark);
+}
+
+.villa-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: var(--earth-dark);
+  font-weight: 600;
+}
+
+.villa-price-sub {
+  font-size: 0.8rem;
+  color: var(--earth);
+}
+
+.villa-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--gold);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background 0.3s;
+}
+
+.villa-link:hover { background: var(--earth-dark); }
+
+/* ===== GUIDE ===== */
+.guide-card {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  background: var(--warm-white);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.guide-photo {
+  width: 280px;
+  height: 340px;
+  border-radius: 20px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.guide-info h3 {
+  font-size: 2rem;
+  color: var(--earth-dark);
+  margin-bottom: 0.3rem;
+}
+
+.guide-info .guide-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
+.guide-info p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.guide-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.guide-highlight {
+  background: var(--sand);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--earth-dark);
+  font-weight: 600;
+}
+
+.guide-instagram {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: opacity 0.3s;
+}
+
+.guide-instagram:hover { opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .guide-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  .guide-photo {
+    width: 200px;
+    height: 240px;
+  }
+  .guide-highlights { justify-content: center; }
+}
+
+/* ===== BUDGET ===== */
+.budget-summary {
+  background: var(--warm-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.budget-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--sand);
+}
+
+.budget-row:last-child { border-bottom: none; }
+
+.budget-row .cat-icon { font-size: 1.3rem; margin-right: 0.8rem; }
+.budget-row .cat-name { font-size: 1rem; color: var(--charcoal); flex: 1; }
+.budget-row .cat-idr { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--earth-dark); min-width: 140px; text-align: right; }
+.budget-row .cat-usd { font-size: 0.85rem; color: var(--earth); min-width: 80px; text-align: right; }
+
+.budget-total {
+  background: linear-gradient(135deg, var(--earth-dark), var(--charcoal));
+  color: white;
+  padding: 1.5rem 2rem;
+}
+
+.budget-total .cat-name { color: white; font-weight: 700; font-size: 1.1rem; }
+.budget-total .cat-idr { color: var(--gold); font-size: 1.3rem; }
+.budget-total .cat-usd { color: rgba(255,255,255,0.7); }
+
+.price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.price-card {
+  background: var(--warm-white);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.price-card:hover { border-color: var(--gold); }
+
+.price-card .price-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--earth);
+  margin-bottom: 0.5rem;
+}
+
+.price-card .price-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--earth-dark);
+}
+
+.price-card .price-idr {
+  font-size: 0.85rem;
+  color: var(--earth);
+}
+
+.price-card.featured {
+  background: linear-gradient(135deg, var(--earth-dark), var(--charcoal));
+  border-color: var(--gold);
+}
+
+.price-card.featured .price-label { color: var(--gold); }
+.price-card.featured .price-amount { color: var(--gold); }
+.price-card.featured .price-idr { color: rgba(255,255,255,0.6); }
+
+/* ===== INCLUDED ===== */
+.included-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) { .included-grid { grid-template-columns: 1fr; } }
+
+.included-list, .excluded-list {
+  background: var(--warm-white);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.included-list h3, .excluded-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.included-list h3 { color: var(--jungle); border-bottom: 2px solid rgba(45,80,22,0.2); }
+.excluded-list h3 { color: var(--coral); border-bottom: 2px solid rgba(212,128,107,0.2); }
+
+.check-list { list-style: none; }
+
+.check-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+}
+
+.check-list li::before {
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+.included-list .check-list li::before { content: '✓'; color: var(--jungle-light); font-weight: 700; }
+.excluded-list .check-list li::before { content: '—'; color: var(--coral); }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--charcoal);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+footer .footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+footer p { font-size: 0.85rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-stats { gap: 1.5rem; }
+  .route-visual { flex-direction: column; }
+  .route-arrow { transform: rotate(90deg); }
+  .day-header { padding: 1rem 1.2rem; gap: 1rem; }
+  .day-schedule { margin-left: 15px; padding: 0 1.2rem 1.5rem 1.2rem; }
+  .nav a { padding: 0.8rem 1rem; font-size: 0.7rem; }
+  .budget-row { padding: 0.8rem 1rem; flex-wrap: wrap; }
+  .villas-grid { grid-template-columns: 1fr; }
+  section { padding: 3rem 1rem; }
+}
+
+/* ===== HERO ENTRY ANIMATION ===== */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes heroGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.15; }
+  33% { transform: scale(1.15) translate(15px, -20px); opacity: 0.25; }
+  66% { transform: scale(0.95) translate(-10px, 10px); opacity: 0.12; }
+}
+
+@keyframes breathe2 {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.1; }
+  50% { transform: scale(1.2) translate(-20px, 15px); opacity: 0.2; }
+}
+
+.hero .hero-ornament {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.hero h1 {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+.hero .hero-date {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+.hero .hero-subtitle {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
+}
+
+.hero .hero-stats {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
+}
+
+.hero .scroll-hint {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.2s both;
+}
+
+/* ===== ORGANIC FLOATING ORBS ===== */
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(196,162,101,0.2), rgba(74,124,46,0.15) 40%, transparent 70%);
+  filter: blur(80px);
+  top: -100px;
+  right: -150px;
+  animation: breathe 20s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Floating orbs between sections */
+.section-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.section-orb-gold {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(196,162,101,0.08), transparent 70%);
+  animation: breathe 25s ease-in-out infinite;
+}
+
+.section-orb-jungle {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(45,80,22,0.06), transparent 70%);
+  animation: breathe2 22s ease-in-out infinite;
+}
+
+.section-orb-ocean {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(26,107,122,0.06), transparent 70%);
+  animation: breathe 18s ease-in-out infinite reverse;
+}
+
+/* ===== STAGGERED SCROLL ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children in visible containers */
+.fade-in.visible .day-card,
+.fade-in.visible .villa-card,
+.fade-in.visible .route-point,
+.fade-in.visible .included-list,
+.fade-in.visible .excluded-list {
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.fade-in.visible .route-point:nth-child(1) { animation-delay: 0s; }
+.fade-in.visible .route-point:nth-child(2) { animation-delay: 0.1s; }
+.fade-in.visible .route-point:nth-child(3) { animation-delay: 0.15s; }
+.fade-in.visible .route-point:nth-child(4) { animation-delay: 0.2s; }
+.fade-in.visible .route-point:nth-child(5) { animation-delay: 0.25s; }
+.fade-in.visible .route-point:nth-child(6) { animation-delay: 0.3s; }
+.fade-in.visible .route-point:nth-child(7) { animation-delay: 0.35s; }
+
+/* Section decorative dividers */
+.section-divider {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  letter-spacing: 1rem;
+  opacity: 0.3;
+}
+
+/* ===== CTA BUTTON ===== */
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--warm-white);
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(196,162,101,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255,255,255,0.15), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(196,162,101,0.4);
+}
+
+.cta-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.cta-btn-dark {
+  background: linear-gradient(135deg, var(--earth-dark), var(--charcoal));
+  box-shadow: 0 4px 20px rgba(92,74,50,0.3);
+}
+
+.cta-btn-dark:hover {
+  box-shadow: 0 8px 30px rgba(92,74,50,0.4);
+}
+
+/* ===== ENHANCED PRICE SECTION ===== */
+@keyframes priceGlow {
+  0%, 100% { box-shadow: 0 8px 30px rgba(196,162,101,0.15), 0 0 0 rgba(196,162,101,0); }
+  50% { box-shadow: 0 12px 40px rgba(196,162,101,0.25), 0 0 60px rgba(196,162,101,0.08); }
+}
+
+.price-card.featured {
+  animation: priceGlow 4s ease-in-out infinite;
+}
+
+/* ===== ENHANCED GUIDE PHOTO ===== */
+.guide-photo {
+  position: relative;
+  border: 3px solid var(--gold);
+}
+
+/* ===== ENHANCED FOOTER ===== */
+footer {
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(196,162,101,0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.footer-cta {
+  margin-top: 2rem;
+}
+
+/* ===== ENHANCED NAV ===== */
+.nav a {
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+/* ===== SECTIONS POSITION FOR ORBS ===== */
+section {
+  position: relative;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-ornament">&#10056; &#10056; &#10056;</div>
+  <h1>
+    Bali
+    <span>Soul Retreat</span>
+  </h1>
+  <div class="hero-date">8 — 15 апреля 2026</div>
+  <p class="hero-subtitle">Убуд &bull; Чандидаса &bull; 8 дней преображения</p>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">8</span>
+      <span class="hero-stat-label">дней</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">2</span>
+      <span class="hero-stat-label">локации</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">4</span>
+      <span class="hero-stat-label">пары</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">10+</span>
+      <span class="hero-stat-label">активностей</span>
+    </div>
+  </div>
+  <a href="#budget" class="cta-btn" style="margin-top: 2.5rem; animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.05s both;">Забронировать место</a>
+  <div class="scroll-hint">&#9662;</div>
+</section>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <a href="#route">Маршрут</a>
+  <a href="#program">Программа</a>
+  <a href="#villas">Виллы</a>
+  <a href="#guide">Проводник</a>
+  <a href="#budget">Стоимость</a>
+  <a href="#included">Что включено</a>
+</nav>
+
+<!-- ===== ROUTE ===== -->
+<section id="route">
+  <div class="section-title fade-in">
+    <div class="ornament">&#10056;</div>
+    <h2>Маршрут</h2>
+    <p>Из аэропорта — в сердце Убуда, затем — на океан Чандидасы</p>
+  </div>
+
+  <div class="route-visual fade-in">
+    <div class="route-point">
+      <h4>Аэропорт</h4>
+      <div class="dates">Нгурах Рай</div>
+      <span class="nights" style="background: var(--earth)">Прилёт 8 апр</span>
+    </div>
+    <div class="route-arrow">&rarr;</div>
+    <div class="route-point">
+      <img class="route-point-img" src="https://assets.guesty.com/image/upload/c_fill,w_220,h_220,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/49881798-6289-43-TCiMH" alt="Убуд" loading="lazy">
+      <h4>Убуд</h4>
+      <div class="dates">8 — 13 апреля</div>
+      <span class="nights">5 ночей</span>
+    </div>
+    <div class="route-arrow">&rarr;</div>
+    <div class="route-point">
+      <img class="route-point-img" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1527684604442-XPQZ268VFG87XYLVSBHE/DJI_0299.JPG?format=300w" alt="Чандидаса" loading="lazy">
+      <h4>Чандидаса</h4>
+      <div class="dates">13 — 15 апреля</div>
+      <span class="nights" style="background: var(--ocean)">2 ночи</span>
+    </div>
+    <div class="route-arrow">&rarr;</div>
+    <div class="route-point">
+      <h4>Аэропорт</h4>
+      <div class="dates">Нгурах Рай</div>
+      <span class="nights" style="background: var(--earth)">Вылет 15 апр</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAM ===== -->
+<section id="program">
+  <div class="section-title fade-in">
+    <div class="ornament">&#10056;</div>
+    <h2>Программа по дням</h2>
+    <p>Нажмите на день, чтобы увидеть детальное расписание</p>
+  </div>
+
+  <div class="days-container fade-in">
+
+    <!-- DAY 1 -->
+    <div class="day-card">
+      <div class="day-header" onclick="toggleDay(this)">
+        <div class="day-number ubud">
+          <span class="num">1</span>
+          <span class="label">день</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">8 апреля, среда</div>
+          <h3>День прилёта и мягкой адаптации</h3>
+        </div>
+        <span class="day-location ubud">Убуд</span>
+        <span class="day-toggle">&#9662;</span>
+      </div>
+      <div class="day-content">
+        <div class="day-banner" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=400&fit=crop&q=80')"></div>
+        <div class="day-schedule">
+          <div class="schedule-item">
+            <div class="schedule-time">До 18:00</div>
+            <div class="schedule-title">Свободное время</div>
+            <div class="schedule-desc">Размещение на вилле, знакомство с пространством, отдых у бассейна. При желании — массаж (по записи).</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://assets.guesty.com/image/upload/c_fill,w_360,h_240,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/49881798-6289-43-TCiMH" alt="Villa Dada бассейн" loading="lazy" onclick="openLightbox('dada', 0)">
+              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1661416803247-9d43d32cf3b6?w=360&h=240&fit=crop&q=80" alt="Спа" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">18:00</div>
+            <div class="schedule-title">Ужин на вилле</div>
+            <div class="schedule-desc">Совместный ужин для всех участниц ретрита.</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">19:00–20:30</div>
+            <div class="schedule-title">Круг знакомства</div>
+            <div class="schedule-desc">Шеринг, чай. Чайная или какао церемония для знакомства и синхронизации.</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">22:00</div>
+            <div class="schedule-title">Рекомендованный сон</div>
+            <div class="schedule-desc">Мягкая адаптация к часовому поясу.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-card">
+      <div class="day-header" onclick="toggleDay(this)">
+        <div class="day-number ubud">
+          <span class="num">2</span>
+          <span class="label">день</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">9 апреля, четверг</div>
+          <h3>Очищение, вода и красота Бали</h3>
+        </div>
+        <span class="day-location ubud">Убуд</span>
+        <span class="day-toggle">&#9662;</span>
+      </div>
+      <div class="day-content">
+        <div class="day-banner" style="background-image: url('https://images.unsplash.com/photo-1704253411849-099f8bff9e4d?w=800&h=400&fit=crop&q=80')"></div>
+        <div class="day-schedule">
+          <div class="schedule-item">
+            <div class="schedule-time">08:00–10:00</div>
+            <div class="schedule-title">Утренняя зарядка</div>
+            <div class="schedule-desc">Лёгкая динамическая практика для пробуждения тела.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=360&h=240&fit=crop&q=80" alt="Утренняя практика" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">10:00–11:00</div>
+            <div class="schedule-title">Завтрак на вилле</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">11:00</div>
+            <div class="schedule-title">Выезд на священные источники Себату</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">12:00–14:00</div>
+            <div class="schedule-title">Омовение в источниках Себату</div>
+            <div class="schedule-desc">Церемония очищения в священной воде. Мангку ведёт церемонию.</div>
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1704253411849-099f8bff9e4d?w=800&h=320&fit=crop&q=80" alt="Священные источники Себату" loading="lazy">
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">14:00–15:00</div>
+            <div class="schedule-title">Обед</div>
+            <div class="schedule-desc">Итальянский ресторан рядом с источниками.</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">15:30</div>
+            <div class="schedule-title">Рисовые террасы</div>
+            <div class="schedule-desc">Прогулка по террасам, качели над каньоном, фотосессия в струящихся платьях, панорамные виды Бали.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1557093793-e196ae071479?w=360&h=240&fit=crop&q=80" alt="Рисовые террасы" loading="lazy">
+              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1697730050329-e11a8eb63c69?w=360&h=240&fit=crop&q=80" alt="Рисовые террасы Бали" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">17:30</div>
+            <div class="schedule-title">Возвращение в Убуд</div>
+            <div class="schedule-desc">Можно заказать массаж.</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">18:30–21:00</div>
+            <div class="schedule-title">Свободный вечер</div>
+            <div class="schedule-desc">Ужин самостоятельно, прогулка по Убуду, магазины, кафе, спа.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-card">
+      <div class="day-header" onclick="toggleDay(this)">
+        <div class="day-number ubud">
+          <span class="num">3</span>
+          <span class="label">день</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">10 апреля, пятница</div>
+          <h3>Активность, природа и огненный ритуал</h3>
+        </div>
+        <span class="day-location ubud">Убуд</span>
+        <span class="day-toggle">&#9662;</span>
+      </div>
+      <div class="day-content">
+        <div style="display:flex;gap:8px;margin-bottom:0">
+          <div class="day-banner" style="background-image: url('terraces.jpg');flex:1;margin-bottom:0"></div>
+          <div class="day-banner" style="background-image: url('fire.jpg');flex:1;margin-bottom:0"></div>
+        </div>
+        <div class="day-schedule">
+          <div class="schedule-item">
+            <div class="schedule-time">08:00–09:00</div>
+            <div class="schedule-title">Лёгкий завтрак на вилле</div>
+            <div class="schedule-desc">Фрукты и лёгкие закуски перед активным днём.</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">09:00–12:30</div>
+            <div class="schedule-title">Гравити</div>
+            <div class="schedule-desc">Выезд в 09:00. Активность с 9:30 до 12:30. Экстрим-парк в джунглях.</div>
+            <img class="activity-photo-wide" src="gravity.jpg" alt="Гравити экстрим-парк" loading="lazy">
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">12:30–14:00</div>
+            <div class="schedule-title">Поздний завтрак / ранний обед в Убуде</div>
+            <div class="schedule-desc">Отдых и восстановление сил.</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">14:00–16:30</div>
+            <div class="schedule-title">Лес обезьян</div>
+            <div class="schedule-desc">Прогулка по Sacred Monkey Forest.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1553427309-e5d92ffd824c?w=360&h=240&fit=crop&q=80" alt="Monkey Forest" loading="lazy">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=360&h=240&fit=crop&q=80" alt="Monkey Forest Убуд" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">17:30–19:00</div>
+            <div class="schedule-title">Огненный ритуал на вилле</div>
+            <div class="schedule-desc">Fire Ceremony. Практика благодарности и манифестации.</div>
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1678875918666-6ba870144ebb?w=800&h=320&fit=crop&q=80" alt="Огненный ритуал" loading="lazy">
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">19:00–21:00</div>
+            <div class="schedule-title">Ужин</div>
+            <div class="schedule-desc">Можно организовать ужин дома или поехать в ресторан в Убуд.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-card">
+      <div class="day-header" onclick="toggleDay(this)">
+        <div class="day-number ubud">
+          <span class="num">4</span>
+          <span class="label">день</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">11 апреля, суббота</div>
+          <h3>Глубокая перезагрузка</h3>
+        </div>
+        <span class="day-location ubud">Убуд</span>
+        <span class="day-toggle">&#9662;</span>
+      </div>
+      <div class="day-content">
+        <div class="day-banner" style="background-image: url('https://images.unsplash.com/photo-1591291621164-2c6367723315?w=800&h=400&fit=crop&q=80')"></div>
+        <div class="day-schedule">
+          <div class="schedule-item">
+            <div class="schedule-time">08:00–10:00</div>
+            <div class="schedule-title">Утренняя дыхательная практика</div>
+            <div class="schedule-desc">Мягкая активация тела.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=360&h=240&fit=crop&q=80" alt="Дыхательная практика" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">10:00–11:00</div>
+            <div class="schedule-title">Завтрак</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">11:00–15:30</div>
+            <div class="schedule-title">Свободное время</div>
+            <div class="schedule-desc">Массажи, отдых у бассейна, чтение, личное пространство.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1682097710082-6f11676a2924?w=360&h=240&fit=crop&q=80" alt="Спа отдых" loading="lazy">
+              <img class="activity-photo" src="https://assets.guesty.com/image/upload/c_fill,w_360,h_240,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/a823d691-9f1b-4e-KpHf6" alt="Villa Dada" loading="lazy" onclick="openLightbox('dada', 3)">
+            </div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">16:00</div>
+            <div class="schedule-title">Баня (опционально)</div>
+            <div class="schedule-desc">Перед саунд-хилингом — отличная перезагрузка.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1540555700478-4be289fbec6f?w=360&h=240&fit=crop&q=80" alt="Баня" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">18:30–20:30</div>
+            <div class="schedule-title">Саунд-хилинг в Pyramids of Chi</div>
+            <div class="schedule-desc">Выезд в 18:30. Sound Healing 19:00–20:30. Глубокая звуковая медитация.</div>
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1591291621164-2c6367723315?w=800&h=320&fit=crop&q=80" alt="Саунд-хилинг Pyramids of Chi" loading="lazy">
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">20:30</div>
+            <div class="schedule-title">Возвращение на виллу</div>
+            <div class="schedule-desc">Ужин после саунд-хилинга.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-card">
+      <div class="day-header" onclick="toggleDay(this)">
+        <div class="day-number ubud">
+          <span class="num">5</span>
+          <span class="label">день</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12 апреля, воскресенье</div>
+          <h3>Горы и водопады</h3>
+        </div>
+        <span class="day-location ubud">Убуд</span>
+        <span class="day-toggle">&#9662;</span>
+      </div>
+      <div class="day-content">
+        <div class="day-banner" style="background-image: url('https://plus.unsplash.com/premium_photo-1697730247123-0ce641e72388?w=800&h=400&fit=crop&q=80')"></div>
+        <div class="day-schedule">
+          <div class="schedule-item">
+            <div class="schedule-time">08:00–09:00</div>
+            <div class="schedule-title">Завтрак</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">09:00</div>
+            <div class="schedule-title">Выезд из Убуда</div>
+            <div class="schedule-desc">Время в пути до Секумпул — примерно 2 часа 15 минут.</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">11:15–14:00</div>
+            <div class="schedule-title">Водопад Секумпул</div>
+            <div class="schedule-desc">Трекинг вниз (30–40 минут), прогулка у водопадов, купание, фотографии, подъём обратно.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1694740747989-e608edf84dfc?w=360&h=240&fit=crop&q=80" alt="Водопад Секумпул" loading="lazy">
+              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1697730247123-0ce641e72388?w=360&h=240&fit=crop&q=80" alt="Водопад" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">14:00</div>
+            <div class="schedule-title">Выезд из Секумпул</div>
+            <div class="schedule-desc">1–1:15 в пути до Бедугула.</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">15:15–18:00</div>
+            <div class="schedule-title">Ботанический сад Бедугул</div>
+            <div class="schedule-desc">Аренда электрокаров, прогулка по саду, пикник (еда заранее с собой), красивые фото, свежий горный воздух.</div>
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&h=320&fit=crop&q=80" alt="Ботанический сад Бедугул" loading="lazy">
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">18:00</div>
+            <div class="schedule-title">Выезд обратно на виллу</div>
+            <div class="schedule-desc">~1 час 40 минут.</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">19:30–20:00</div>
+            <div class="schedule-title">Возвращение на виллу</div>
+            <div class="schedule-desc">Ужин — доставка из ресторана или организовать на вилле.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day-card">
+      <div class="day-header" onclick="toggleDay(this)">
+        <div class="day-number transfer">
+          <span class="num">6</span>
+          <span class="label">день</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">13 апреля, понедельник</div>
+          <h3>Переезд на океан — вилла Manis в Чандидасе</h3>
+        </div>
+        <span class="day-location transfer">Переезд</span>
+        <span class="day-toggle">&#9662;</span>
+      </div>
+      <div class="day-content">
+        <div class="day-banner" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1527684604442-XPQZ268VFG87XYLVSBHE/DJI_0299.JPG?format=1500w')"></div>
+        <div class="day-schedule">
+          <div class="schedule-item highlight">
+            <div class="schedule-time">08:00–09:30</div>
+            <div class="schedule-title">Утренняя практика</div>
+            <div class="schedule-desc">Мягкая зарядка, парная йога с приглашённым мастером, дыхательная практика.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1508081685193-835a84a79091?w=360&h=240&fit=crop&q=80" alt="Йога" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">09:30–10:30</div>
+            <div class="schedule-title">Завтрак на вилле</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">10:30–11:00</div>
+            <div class="schedule-title">Сборы и подготовка к выезду</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">11:00</div>
+            <div class="schedule-title">Выезд из Убуда</div>
+            <div class="schedule-desc">Время в пути до Чандидасы — примерно 1 час 30–40 минут.</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">12:30–13:00</div>
+            <div class="schedule-title">Приезд на виллу Villa Manis Candidasa</div>
+            <div class="schedule-desc">Размещение на вилле.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791047463-5LO7UJ8U1VG3QNP1ZV09/1.jpg?format=750w" alt="Villa Manis бассейн" loading="lazy" onclick="openLightbox('manis', 1)">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790939210-IYR2ES4GS3ZLGA3PI2O0/2.jpg?format=750w" alt="Villa Manis интерьер" loading="lazy" onclick="openLightbox('manis', 2)">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790967890-P293THD7NFSM6DF12X8L/3.jpg?format=750w" alt="Villa Manis спальня" loading="lazy" onclick="openLightbox('manis', 3)">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">13:30</div>
+            <div class="schedule-title">Обед</div>
+            <div class="schedule-desc">На вилле или в ресторанах в пешей доступности. После обеда — свободное время: отдых у океана, бассейн, массаж, прогулка по пляжу.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791125762-DZEUI8NPBZGIIQP5N321/5.jpg?format=750w" alt="Villa Manis" loading="lazy" onclick="openLightbox('manis', 5)">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791243715-Q3SZ6N7OIDWTPF4XAYTO/6.jpg?format=750w" alt="Villa Manis" loading="lazy" onclick="openLightbox('manis', 6)">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">19:00</div>
+            <div class="schedule-title">Ужин</div>
+            <div class="schedule-desc">На вилле или в ресторане Vincent. Спокойный вечер у океана.</div>
+            <img class="activity-photo-wide" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791350868-RW3ZHA4JXARI5M258ESF/8.jpg?format=1500w" alt="Villa Manis закат" loading="lazy" onclick="openLightbox('manis', 8)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-card">
+      <div class="day-header" onclick="toggleDay(this)">
+        <div class="day-number chandidasa">
+          <span class="num">7</span>
+          <span class="label">день</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">14 апреля, вторник</div>
+          <h3>Храм Лемпуянг — Врата в Небо</h3>
+        </div>
+        <span class="day-location chandidasa">Чандидаса</span>
+        <span class="day-toggle">&#9662;</span>
+      </div>
+      <div class="day-content">
+        <div class="day-banner" style="background-image: url('https://images.unsplash.com/photo-1604922824961-87cefb2e4b07?w=800&h=400&fit=crop&q=80')"></div>
+        <div class="day-schedule">
+          <div class="schedule-item">
+            <div class="schedule-time">03:00</div>
+            <div class="schedule-title">Ранний подъём</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">03:30</div>
+            <div class="schedule-title">Выезд</div>
+            <div class="schedule-desc">Время в пути — примерно 1 час.</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">04:30–07:30</div>
+            <div class="schedule-title">Встреча рассвета у Храма Лемпуянг</div>
+            <div class="schedule-desc">Нереальные фотографии, наблюдение за восходом солнца, атмосфера вулкана и гор. Знаменитые «Врата в Небо». Вид на вулкан Агунг.</div>
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1604922824961-87cefb2e4b07?w=800&h=320&fit=crop&q=80" alt="Храм Лемпуянг" loading="lazy">
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">08:30–09:30</div>
+            <div class="schedule-title">Возвращение</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">09:30</div>
+            <div class="schedule-title">Завтрак</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">10:30–15:00</div>
+            <div class="schedule-title">Отдых</div>
+            <div class="schedule-desc">Сон после раннего подъёма, бассейн, океан, расслабление.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791278884-9YCJ2QTNX21XRZQW4TJR/9.jpg?format=750w" alt="Villa Manis бассейн" loading="lazy" onclick="openLightbox('manis', 9)">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791440342-2N8402QWMA7S4YKP9WUO/12.jpg?format=750w" alt="Villa Manis пляж" loading="lazy" onclick="openLightbox('manis', 12)">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">15:00</div>
+            <div class="schedule-title">Обед</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">16:00–18:00</div>
+            <div class="schedule-title">Встреча с астрологом</div>
+            <div class="schedule-desc">Приглашённый мастер Янас. Астрология, нумерология, мини-лекция о жизненных циклах, личные циклы и предназначение, разбор дат рождения.</div>
+            <div class="activity-photos">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1532968961962-8a0cb3a2d4f0?w=360&h=240&fit=crop&q=80" alt="Астрология" loading="lazy">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">18:00–19:00</div>
+            <div class="schedule-title">Праздничный ужин</div>
+          </div>
+          <div class="schedule-item highlight">
+            <div class="schedule-time">19:00–21:00</div>
+            <div class="schedule-title">Живая музыка на ханге</div>
+            <div class="schedule-desc">Медитативное завершение дня. Инструмент Ханг (Handpan).</div>
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1520523839897-bd33c68b3665?w=800&h=320&fit=crop&q=80" alt="Ханг музыка" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 8 -->
+    <div class="day-card">
+      <div class="day-header" onclick="toggleDay(this)">
+        <div class="day-number chandidasa">
+          <span class="num">8</span>
+          <span class="label">день</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">15 апреля, среда</div>
+          <h3>Завершение ретрита</h3>
+        </div>
+        <span class="day-location chandidasa">Чандидаса</span>
+        <span class="day-toggle">&#9662;</span>
+      </div>
+      <div class="day-content">
+        <div class="day-banner" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1527684604442-XPQZ268VFG87XYLVSBHE/DJI_0299.JPG?format=1500w')"></div>
+        <div class="day-schedule">
+          <div class="schedule-item">
+            <div class="schedule-time">08:00–10:00</div>
+            <div class="schedule-title">Утренняя практика</div>
+            <div class="schedule-desc">Завершающая практика у океана.</div>
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1509684420792-749974015823?w=800&h=320&fit=crop&q=80" alt="Практика у океана" loading="lazy">
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">10:00–11:00</div>
+            <div class="schedule-title">Завтрак на вилле</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">11:00–12:00</div>
+            <div class="schedule-title">Подготовка к выезду</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">12:00</div>
+            <div class="schedule-title">Трансфер в аэропорт / дальнейшие планы</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider">&#10043; &nbsp; &#10043; &nbsp; &#10043;</div>
+
+<!-- ===== VILLAS ===== -->
+<section id="villas">
+  <div class="section-title fade-in">
+    <div class="ornament">&#10056;</div>
+    <h2>Наши виллы</h2>
+    <p>Два уникальных места — джунгли Убуда и океан Чандидасы</p>
+  </div>
+
+  <div class="villas-grid fade-in">
+    <!-- Villa Dada -->
+    <div class="villa-card">
+      <div class="villa-gallery" data-gallery="dada">
+        <div class="villa-gallery-main" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/49881798-6289-43-TCiMH')" onclick="openLightbox('dada', 0)">
+          <span class="villa-gallery-count" onclick="event.stopPropagation(); openLightbox('dada', 0)">40 фото</span>
+          <div class="villa-image-label">Убуд &bull; Джунгли</div>
+        </div>
+        <div class="villa-gallery-grid">
+          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/0d722985-c308-40-GrAVi')" onclick="openLightbox('dada', 1)"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/cec78bde-12d6-4a-A1SpY')" onclick="openLightbox('dada', 2)"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/a823d691-9f1b-4e-KpHf6')" onclick="openLightbox('dada', 3)"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/28403edd-5156-4b-6Cjyr')" onclick="openLightbox('dada', 4)"></div>
+        </div>
+      </div>
+      <div class="villa-body">
+        <h3>Villa Dada</h3>
+        <p class="villa-sub">6 спален &bull; 12 гостей &bull; 20-метровый бассейн &bull; Виды на джунгли</p>
+        <div class="villa-features">
+          <span class="villa-feature">6 спален</span>
+          <span class="villa-feature">6 ванных</span>
+          <span class="villa-feature">Бассейн 20м</span>
+          <span class="villa-feature">Спа</span>
+          <span class="villa-feature">Тренажёрный зал</span>
+          <span class="villa-feature">Wi-Fi</span>
+        </div>
+        <div class="villa-price-sub">5 ночей &bull; Убуд</div>
+        <br>
+        <a href="https://bestay.co/villa/villa-dada" target="_blank" class="villa-link">Сайт виллы</a>
+      </div>
+    </div>
+
+    <!-- Chandidasa Villa -->
+    <div class="villa-card">
+      <div class="villa-gallery" data-gallery="manis">
+        <div class="villa-gallery-main" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1527684604442-XPQZ268VFG87XYLVSBHE/DJI_0299.JPG?format=1500w')" onclick="openLightbox('manis', 0)">
+          <span class="villa-gallery-count" onclick="event.stopPropagation(); openLightbox('manis', 0)">30+ фото</span>
+          <div class="villa-image-label">Чандидаса &bull; Океан</div>
+        </div>
+        <div class="villa-gallery-grid">
+          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791047463-5LO7UJ8U1VG3QNP1ZV09/1.jpg?format=750w')" onclick="openLightbox('manis', 1)"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790939210-IYR2ES4GS3ZLGA3PI2O0/2.jpg?format=750w')" onclick="openLightbox('manis', 2)"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790967890-P293THD7NFSM6DF12X8L/3.jpg?format=750w')" onclick="openLightbox('manis', 3)"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791002383-1UDA2N68FNVC8V2JI0YK/4.JPG?format=750w')" onclick="openLightbox('manis', 4)"></div>
+        </div>
+      </div>
+      <div class="villa-body">
+        <h3>Villa Manis Beachfront</h3>
+        <p class="villa-sub">6 спален &bull; Инфинити-бассейн &bull; Собственный пляж</p>
+        <div class="villa-features">
+          <span class="villa-feature">6 спален</span>
+          <span class="villa-feature">Инфинити-пул</span>
+          <span class="villa-feature">Сауна</span>
+          <span class="villa-feature">Джакузи</span>
+          <span class="villa-feature">Пляж</span>
+          <span class="villa-feature">Батлер</span>
+        </div>
+        <div class="villa-price-sub">2 ночи &bull; Чандидаса</div>
+        <br>
+        <a href="https://www.villamanisbeachfront.com/" target="_blank" class="villa-link" style="background: var(--ocean)">Сайт виллы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUIDE ===== -->
+<section id="guide">
+  <div class="section-title fade-in">
+    <div class="ornament">&#10056;</div>
+    <h2>Ваш проводник</h2>
+    <p>Человек, который проведёт вас через трансформацию</p>
+  </div>
+
+  <div class="guide-card fade-in">
+    <img class="guide-photo" src="utka-guide.jpg" alt="Утка — проводник ретрита" style="border-radius: 50%; width: 280px; height: 280px; object-position: center top;">
+    <div class="guide-info">
+      <h3>Утка</h3>
+      <div class="guide-subtitle">Проводник в мир здорового образа жизни</div>
+      <p>
+        48 лет в здоровом, сильном теле. Автор курса «Чистое тело, чистое сознание».
+        Более 13 лет живёт на Бали с мужем и детьми, глубоко погружена в балийскую культуру,
+        традиции очищения и духовные практики острова.
+      </p>
+      <p>
+        «В моём мире болезней не существует» — это не просто слова, а философия,
+        которую Утка передаёт через личный пример, практики и создание пространства
+        для вашей трансформации.
+      </p>
+      <div class="guide-highlights">
+        <span class="guide-highlight">13+ лет на Бали</span>
+        <span class="guide-highlight">23K+ подписчиков</span>
+        <span class="guide-highlight">Авторский курс</span>
+        <span class="guide-highlight">Духовные практики</span>
+        <span class="guide-highlight">ЗОЖ</span>
+      </div>
+      <a href="https://www.instagram.com/ytka___love/" target="_blank" class="guide-instagram">@ytka___love</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== СТОИМОСТЬ ===== -->
+<section id="budget">
+  <div class="section-title fade-in">
+    <div class="ornament">&#10056;</div>
+    <h2>Стоимость</h2>
+    <p>8 дней полного погружения на Бали</p>
+  </div>
+
+  <div class="price-cards fade-in">
+    <div class="price-card featured" style="grid-column: 1 / -1; max-width: 480px; margin: 0 auto;">
+      <div class="price-label">Стоимость на пару</div>
+      <div class="price-amount" style="font-size: 3.5rem;">$3,133</div>
+      <div class="price-idr">50,125,500 IDR</div>
+      <p style="margin-top: 1.2rem; font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.8;">
+        $1,392 на одного гостя<br>
+        8 дней &bull; 7 ночей &bull; 2 виллы &bull; все активности
+      </p>
+      <a href="https://www.instagram.com/ytka___love/" target="_blank" class="cta-btn" style="margin-top: 1.8rem; font-size: 0.8rem;">Забронировать место</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INCLUDED ===== -->
+<section id="included">
+  <div class="section-title fade-in">
+    <div class="ornament">&#10056;</div>
+    <h2>Что включено</h2>
+  </div>
+
+  <div class="included-grid fade-in">
+    <div class="included-list">
+      <h3>Включено в стоимость</h3>
+      <ul class="check-list">
+        <li>Проживание: 5 ночей Villa Dada в Убуде + 2 ночи Villa Manis Beachfront</li>
+        <li>Все трансферы (аэропорт, переезды)</li>
+        <li>Аренда байков в Убуде (4 шт)</li>
+        <li>Завтраки на вилле (личный повар)</li>
+        <li>Welcome-пакет с подарками для каждого гостя</li>
+        <li>Очищение в источниках Себату с мангку</li>
+        <li>Огненный ритуал (Fire Ceremony) на вилле</li>
+        <li>Гравити — экстрим-парк в джунглях</li>
+        <li>Лес обезьян (Monkey Forest)</li>
+        <li>Водопад Секумпул (трекинг + гид)</li>
+        <li>Ботанический сад Бедугул</li>
+        <li>Баня</li>
+        <li>Саунд-хилинг в Pyramids of Chi</li>
+        <li>Храм Лемпуянг — рассвет у Врат в Небо</li>
+        <li>Встреча с астрологом Янас + живая музыка на ханге</li>
+        <li>Утренние практики и гимнастика</li>
+        <li>Полное сопровождение организатора (8 дней)</li>
+      </ul>
+    </div>
+    <div class="excluded-list">
+      <h3>Не включено</h3>
+      <ul class="check-list">
+        <li>Авиаперелёт (покупается самостоятельно)</li>
+        <li>Обеды и ужины (кроме завтраков)</li>
+        <li>Личные расходы и шоппинг</li>
+        <li>Массажи (оплачиваются отдельно)</li>
+        <li>Страховка</li>
+        <li>Ужин в Vincent's (за свой счёт)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">Bali Soul Retreat</div>
+  <p>8 — 15 апреля 2026 &bull; Убуд &bull; Чандидаса</p>
+  <div class="footer-cta">
+    <a href="https://www.instagram.com/ytka___love/" target="_blank" class="cta-btn" style="font-size: 0.8rem;">Написать организатору</a>
+  </div>
+  <p style="margin-top: 1.5rem; font-size: 0.75rem; opacity: 0.5;">Количество мест ограничено &bull; Осталось 2 места</p>
+</footer>
+
+<script>
+// Toggle day cards
+function toggleDay(header) {
+  const card = header.closest('.day-card');
+  card.classList.toggle('open');
+}
+
+// Open first day by default
+document.querySelector('.day-card').classList.add('open');
+
+// Scroll animations with stagger support
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add stagger delay to children
+      const children = entry.target.querySelectorAll('.check-list li, .guide-highlight, .villa-feature');
+      children.forEach((child, i) => {
+        child.style.opacity = '0';
+        child.style.transform = 'translateY(15px)';
+        child.style.transition = `opacity 0.5s cubic-bezier(0.16,1,0.3,1) ${i * 0.06}s, transform 0.5s cubic-bezier(0.16,1,0.3,1) ${i * 0.06}s`;
+        requestAnimationFrame(() => {
+          child.style.opacity = '1';
+          child.style.transform = 'translateY(0)';
+        });
+      });
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Parallax hero on scroll
+window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.hero');
+  if (hero && window.scrollY < window.innerHeight) {
+    const y = window.scrollY * 0.3;
+    hero.style.backgroundPositionY = `calc(50% + ${y}px)`;
+  }
+}, { passive: true });
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// ===== LIGHTBOX & GALLERY =====
+const galleries = {
+  dada: [
+    'https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/49881798-6289-43-TCiMH',
+    'https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/0d722985-c308-40-GrAVi',
+    'https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/cec78bde-12d6-4a-A1SpY',
+    'https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/a823d691-9f1b-4e-KpHf6',
+    'https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/v1767697854/production/64ad29a375ac96002da6983a/paesi2bdpee7o87ozytz.jpg',
+    'https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/28403edd-5156-4b-6Cjyr',
+    'https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/5e6f7ba8-aaea-4f-jMemd',
+    'https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/61e81c5c-ec4a-47-0WiDz'
+  ],
+  manis: [
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1527684604442-XPQZ268VFG87XYLVSBHE/DJI_0299.JPG?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791047463-5LO7UJ8U1VG3QNP1ZV09/1.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790939210-IYR2ES4GS3ZLGA3PI2O0/2.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790967890-P293THD7NFSM6DF12X8L/3.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791002383-1UDA2N68FNVC8V2JI0YK/4.JPG?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791125762-DZEUI8NPBZGIIQP5N321/5.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791243715-Q3SZ6N7OIDWTPF4XAYTO/6.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791210298-ADZ8Q8Q1J3XDQRB4VVN1/7.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791350868-RW3ZHA4JXARI5M258ESF/8.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791278884-9YCJ2QTNX21XRZQW4TJR/9.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791301604-7I43GXRPRTXY4C5NSEAZ/10.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791324180-BLI4006UVODX4U2ZDDF4/11.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791440342-2N8402QWMA7S4YKP9WUO/12.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791365072-AORLAS7OLPGXBPKE8WA7/13.JPG?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791398430-K1W8ABGIW01TJ21XJZEU/14.JPG?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791559609-40WXP4LN6APE4HF5FVIC/16.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791538939-P5OPDIFB25FEQEW13IFM/17.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791616178-YRG4BQN70NCCIGC5NRG0/18.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791675459-LB3T6PSGBS3UFPSND5B6/19.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791634355-19WKP91P4RMD080GN3GV/20.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791654585-X3RIYEZE0QFK0P30AJ7U/22.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791658032-7RIIF1XPPWDF75F1OAWB/23.JPG?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791672774-YLJ894VLDYG24NK51HX2/24.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791712488-59R3U5AQQMEQHSI1J2RV/25.JPG?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791684605-VSA9XJV0DHDZV448JMX6/27.JPG?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791703203-CKKM0DJTKKYCE4H92RF3/28.JPG?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791831813-3VWHB74U1FVOLH1SOGF2/29.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791861825-I0P4N62T1C9LNLNKADJU/31.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791939883-PWIU1SM5J2VX2E2D1LBG/32.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791878747-2HPFFCVBPXW6OIA8EZ95/a.jpg?format=1500w',
+    'https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791971054-TGHIAB9FQNTAZ27OHB6J/b.jpg?format=1500w'
+  ]
+};
+
+let currentGallery = null;
+let currentIndex = 0;
+
+function openLightbox(galleryName, index) {
+  currentGallery = galleryName;
+  currentIndex = index;
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('active');
+  updateLightbox();
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+  currentGallery = null;
+}
+
+function navigateLightbox(dir) {
+  if (!currentGallery) return;
+  const photos = galleries[currentGallery];
+  currentIndex = (currentIndex + dir + photos.length) % photos.length;
+  updateLightbox();
+}
+
+function updateLightbox() {
+  if (!currentGallery) return;
+  const photos = galleries[currentGallery];
+  const img = document.getElementById('lightbox-img');
+  const counter = document.getElementById('lightbox-counter');
+  const thumbsContainer = document.getElementById('lightbox-thumbs');
+
+  img.src = photos[currentIndex];
+  counter.textContent = (currentIndex + 1) + ' / ' + photos.length;
+
+  // Update thumbnails
+  thumbsContainer.innerHTML = '';
+  photos.forEach((url, i) => {
+    const thumb = document.createElement('img');
+    thumb.className = 'lightbox-thumb' + (i === currentIndex ? ' active' : '');
+    thumb.src = url.replace('im_w=1200', 'im_w=240').replace('format=1500w', 'format=300w').replace('w_1200,h_800', 'w_240,h_160');
+    thumb.onclick = () => { currentIndex = i; updateLightbox(); };
+    thumbsContainer.appendChild(thumb);
+  });
+
+  // Scroll active thumb into view
+  setTimeout(() => {
+    const active = thumbsContainer.querySelector('.active');
+    if (active) active.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }, 50);
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navigateLightbox(-1);
+  if (e.key === 'ArrowRight') navigateLightbox(1);
+});
+</script>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" onclick="if(event.target===this) closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="Villa photo">
+  <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+  <div class="lightbox-thumbs" id="lightbox-thumbs"></div>
+</div>
+
+</body>
+</html>
