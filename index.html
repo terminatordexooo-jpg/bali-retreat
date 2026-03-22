@@ -69,7 +69,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=3840?w=1920&h=1080&fit=crop&q=80h=2160?w=1920&h=1080&fit=crop&q=80fit=crop?w=1920&h=1080&fit=crop&q=80q=95') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=3840&h=2160&fit=crop&q=95') center/cover no-repeat;
   position: relative;
   overflow: hidden;
   padding: 2rem;
@@ -564,8 +564,6 @@ section {
 .lightbox.active { display: flex; }
 
 .lightbox-img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
   max-width: 90vw;
   max-height: 75vh;
   object-fit: contain;
@@ -709,8 +707,6 @@ section {
 
 /* ===== ROUTE IMAGES ===== */
 .route-point-img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
   width: 110px;
   height: 110px;
   border-radius: 50%;
@@ -1362,15 +1358,15 @@ section {
         <span class="day-toggle">&#9662;</span>
       </div>
       <div class="day-content">
-        <div class="day-banner" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=3840?w=800&h=400&fit=crop&q=80h=1920?w=800&h=400&fit=crop&q=80fit=crop?w=800&h=400&fit=crop&q=80q=95')"></div>
+        <div class="day-banner" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=3840&h=1920&fit=crop&q=95')"></div>
         <div class="day-schedule">
           <div class="schedule-item">
             <div class="schedule-time">До 18:00</div>
             <div class="schedule-title">Свободное время</div>
             <div class="schedule-desc">Размещение на вилле, знакомство с пространством, отдых у бассейна. При желании — массаж (по записи).</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://assets.guesty.com/image/upload/c_fill,w_1920,h_1280,q_95/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/49881798-6289-43-TCiMH" alt="Villa Dada бассейн" loading="lazy" onclick="openLightbox('dada', 0)">
-              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1661416803247-9d43d32cf3b6?w=1920?w=360&h=240&fit=crop&q=80h=1280?w=360&h=240&fit=crop&q=80fit=crop?w=360&h=240&fit=crop&q=80q=95" alt="Спа" loading="lazy">
+              <img class="activity-photo" src="https://assets.guesty.com/image/upload/c_fill,w_1920,h_1280,q_95/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/49881798-6289-43-TCiMH" alt="Villa Dada бассейн" loading="lazy">
+              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1661416803247-9d43d32cf3b6?w=1920&h=1280&fit=crop&q=95" alt="Спа" loading="lazy">
             </div>
           </div>
           <div class="schedule-item">
@@ -1407,14 +1403,14 @@ section {
         <span class="day-toggle">&#9662;</span>
       </div>
       <div class="day-content">
-        <div class="day-banner" style="background-image: url('https://images.unsplash.com/photo-1704253411849-099f8bff9e4d?w=3840?w=800&h=400&fit=crop&q=80h=1920?w=800&h=400&fit=crop&q=80fit=crop?w=800&h=400&fit=crop&q=80q=95')"></div>
+        <div class="day-banner" style="background-image: url('https://images.unsplash.com/photo-1704253411849-099f8bff9e4d?w=3840&h=1920&fit=crop&q=95')"></div>
         <div class="day-schedule">
           <div class="schedule-item">
             <div class="schedule-time">08:00–10:00</div>
             <div class="schedule-title">Утренняя зарядка</div>
             <div class="schedule-desc">Лёгкая динамическая практика для пробуждения тела.</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920?w=360&h=240&fit=crop&q=80h=1280?w=360&h=240&fit=crop&q=80fit=crop?w=360&h=240&fit=crop&q=80q=95" alt="Утренняя практика" loading="lazy">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&h=1280&fit=crop&q=95" alt="Утренняя практика" loading="lazy">
             </div>
           </div>
           <div class="schedule-item">
@@ -1429,7 +1425,10 @@ section {
             <div class="schedule-time">12:00–14:00</div>
             <div class="schedule-title">Омовение в источниках Себату</div>
             <div class="schedule-desc">Церемония очищения в священной воде. Мангку ведёт церемонию.</div>
-            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1704253411849-099f8bff9e4d?w=3840?w=800&h=320&fit=crop&q=80h=1536?w=800&h=320&fit=crop&q=80fit=crop?w=800&h=320&fit=crop&q=80q=95" alt="Священные источники Себату" loading="lazy">
+            <div style="display:flex;gap:8px">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1704253411849-099f8bff9e4d?w=1920&h=1280&fit=crop&q=95" alt="Священные источники Себату" loading="lazy" style="flex:1;border-radius:12px;object-fit:cover">
+              <img class="activity-photo" src="sebatu2.jpg" alt="Омовение в Себату" loading="lazy" style="flex:1;border-radius:12px;object-fit:cover">
+            </div>
           </div>
           <div class="schedule-item">
             <div class="schedule-time">14:00–15:00</div>
@@ -1475,7 +1474,7 @@ section {
       </div>
       <div class="day-content">
         <div style="display:flex;gap:8px;margin-bottom:0">
-          <div class="day-banner" style="background-image: url('rice_aerial.jpg');flex:1;margin-bottom:0"></div>
+          <div class="day-banner" style="background-image: url('gravity.jpg');flex:1;margin-bottom:0"></div>
           <div class="day-banner" style="background-image: url('fire.jpg');flex:1;margin-bottom:0"></div>
         </div>
         <div class="day-schedule">
@@ -1500,8 +1499,8 @@ section {
             <div class="schedule-title">Лес обезьян</div>
             <div class="schedule-desc">Прогулка по Sacred Monkey Forest.</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://images.unsplash.com/photo-1553427309-e5d92ffd824c?w=1920?w=360&h=240&fit=crop&q=80h=1280?w=360&h=240&fit=crop&q=80fit=crop?w=360&h=240&fit=crop&q=80q=95" alt="Monkey Forest" loading="lazy">
-              <img class="activity-photo" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1920?w=360&h=240&fit=crop&q=80h=1280?w=360&h=240&fit=crop&q=80fit=crop?w=360&h=240&fit=crop&q=80q=95" alt="Monkey Forest Убуд" loading="lazy">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1553427309-e5d92ffd824c?w=1920&h=1280&fit=crop&q=95" alt="Monkey Forest" loading="lazy">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1920&h=1280&fit=crop&q=95" alt="Monkey Forest Убуд" loading="lazy">
             </div>
           </div>
           <div class="schedule-item highlight">
@@ -1541,7 +1540,7 @@ section {
             <div class="schedule-title">Утренняя дыхательная практика</div>
             <div class="schedule-desc">Мягкая активация тела.</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920?w=360&h=240&fit=crop&q=80h=1280?w=360&h=240&fit=crop&q=80fit=crop?w=360&h=240&fit=crop&q=80q=95" alt="Дыхательная практика" loading="lazy">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&h=1280&fit=crop&q=95" alt="Дыхательная практика" loading="lazy">
             </div>
           </div>
           <div class="schedule-item">
@@ -1553,8 +1552,8 @@ section {
             <div class="schedule-title">Свободное время</div>
             <div class="schedule-desc">Массажи, отдых у бассейна, чтение, личное пространство.</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1682097710082-6f11676a2924?w=1920?w=360&h=240&fit=crop&q=80h=1280?w=360&h=240&fit=crop&q=80fit=crop?w=360&h=240&fit=crop&q=80q=95" alt="Спа отдых" loading="lazy">
-              <img class="activity-photo" src="https://assets.guesty.com/image/upload/c_fill,w_1920,h_1280,q_95/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/a823d691-9f1b-4e-KpHf6" alt="Villa Dada" loading="lazy" onclick="openLightbox('dada', 3)">
+              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1682097710082-6f11676a2924?w=1920&h=1280&fit=crop&q=95" alt="Спа отдых" loading="lazy">
+              <img class="activity-photo" src="https://assets.guesty.com/image/upload/c_fill,w_1920,h_1280,q_95/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/a823d691-9f1b-4e-KpHf6" alt="Villa Dada" loading="lazy">
             </div>
           </div>
           <div class="schedule-item highlight">
@@ -1615,7 +1614,7 @@ section {
             <div class="schedule-desc">Трекинг вниз (30–40 минут), прогулка у водопадов, купание, фотографии, подъём обратно.</div>
             <div class="activity-photos">
               <img class="activity-photo" src="sekumpul.jpg" alt="Водопад Секумпул" loading="lazy">
-              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1697730247123-0ce641e72388?w=1920?w=360&h=240&fit=crop&q=80h=1280?w=360&h=240&fit=crop&q=80fit=crop?w=360&h=240&fit=crop&q=80q=95" alt="Водопад" loading="lazy">
+              <img class="activity-photo" src="https://plus.unsplash.com/premium_photo-1697730247123-0ce641e72388?w=1920&h=1280&fit=crop&q=95" alt="Водопад" loading="lazy">
             </div>
           </div>
           <div class="schedule-item">
@@ -1627,7 +1626,7 @@ section {
             <div class="schedule-time">15:15–18:00</div>
             <div class="schedule-title">Ботанический сад Бедугул</div>
             <div class="schedule-desc">Аренда электрокаров, прогулка по саду, пикник (еда заранее с собой), красивые фото, свежий горный воздух.</div>
-            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=3840?w=800&h=320&fit=crop&q=80h=1536?w=800&h=320&fit=crop&q=80fit=crop?w=800&h=320&fit=crop&q=80q=95" alt="Ботанический сад Бедугул" loading="lazy">
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=3840&h=1536&fit=crop&q=95" alt="Ботанический сад Бедугул" loading="lazy">
           </div>
           <div class="schedule-item">
             <div class="schedule-time">18:00</div>
@@ -1665,7 +1664,7 @@ section {
             <div class="schedule-title">Утренняя практика</div>
             <div class="schedule-desc">Мягкая зарядка, парная йога с приглашённым мастером, дыхательная практика.</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://images.unsplash.com/photo-1508081685193-835a84a79091?w=1920?w=360&h=240&fit=crop&q=80h=1280?w=360&h=240&fit=crop&q=80fit=crop?w=360&h=240&fit=crop&q=80q=95" alt="Йога" loading="lazy">
+              <img class="activity-photo" src="https://images.unsplash.com/photo-1508081685193-835a84a79091?w=1920&h=1280&fit=crop&q=95" alt="Йога" loading="lazy">
             </div>
           </div>
           <div class="schedule-item">
@@ -1686,9 +1685,9 @@ section {
             <div class="schedule-title">Приезд на виллу Villa Manis Candidasa</div>
             <div class="schedule-desc">Размещение на вилле.</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791047463-5LO7UJ8U1VG3QNP1ZV09/1.jpg?format=2500w" alt="Villa Manis бассейн" loading="lazy" onclick="openLightbox('manis', 1)">
-              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790939210-IYR2ES4GS3ZLGA3PI2O0/2.jpg?format=2500w" alt="Villa Manis интерьер" loading="lazy" onclick="openLightbox('manis', 2)">
-              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790967890-P293THD7NFSM6DF12X8L/3.jpg?format=2500w" alt="Villa Manis спальня" loading="lazy" onclick="openLightbox('manis', 3)">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791047463-5LO7UJ8U1VG3QNP1ZV09/1.jpg?format=2500w" alt="Villa Manis бассейн" loading="lazy">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790939210-IYR2ES4GS3ZLGA3PI2O0/2.jpg?format=2500w" alt="Villa Manis интерьер" loading="lazy">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790967890-P293THD7NFSM6DF12X8L/3.jpg?format=2500w" alt="Villa Manis спальня" loading="lazy">
             </div>
           </div>
           <div class="schedule-item">
@@ -1696,15 +1695,15 @@ section {
             <div class="schedule-title">Обед</div>
             <div class="schedule-desc">На вилле или в ресторанах в пешей доступности. После обеда — свободное время: отдых у океана, бассейн, массаж, прогулка по пляжу.</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791125762-DZEUI8NPBZGIIQP5N321/5.jpg?format=2500w" alt="Villa Manis" loading="lazy" onclick="openLightbox('manis', 5)">
-              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791243715-Q3SZ6N7OIDWTPF4XAYTO/6.jpg?format=2500w" alt="Villa Manis" loading="lazy" onclick="openLightbox('manis', 6)">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791125762-DZEUI8NPBZGIIQP5N321/5.jpg?format=2500w" alt="Villa Manis" loading="lazy">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791243715-Q3SZ6N7OIDWTPF4XAYTO/6.jpg?format=2500w" alt="Villa Manis" loading="lazy">
             </div>
           </div>
           <div class="schedule-item">
             <div class="schedule-time">19:00</div>
             <div class="schedule-title">Ужин</div>
             <div class="schedule-desc">На вилле или в ресторане Vincent. Спокойный вечер у океана.</div>
-            <img class="activity-photo-wide" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791350868-RW3ZHA4JXARI5M258ESF/8.jpg?format=2500w" alt="Villa Manis закат" loading="lazy" onclick="openLightbox('manis', 8)">
+            <img class="activity-photo-wide" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791350868-RW3ZHA4JXARI5M258ESF/8.jpg?format=2500w" alt="Villa Manis закат" loading="lazy">
           </div>
         </div>
       </div>
@@ -1758,8 +1757,8 @@ section {
             <div class="schedule-title">Отдых</div>
             <div class="schedule-desc">Сон после раннего подъёма, бассейн, океан, расслабление.</div>
             <div class="activity-photos">
-              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791278884-9YCJ2QTNX21XRZQW4TJR/9.jpg?format=2500w" alt="Villa Manis бассейн" loading="lazy" onclick="openLightbox('manis', 9)">
-              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791440342-2N8402QWMA7S4YKP9WUO/12.jpg?format=2500w" alt="Villa Manis пляж" loading="lazy" onclick="openLightbox('manis', 12)">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791278884-9YCJ2QTNX21XRZQW4TJR/9.jpg?format=2500w" alt="Villa Manis бассейн" loading="lazy">
+              <img class="activity-photo" src="https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791440342-2N8402QWMA7S4YKP9WUO/12.jpg?format=2500w" alt="Villa Manis пляж" loading="lazy">
             </div>
           </div>
           <div class="schedule-item">
@@ -1809,7 +1808,7 @@ section {
             <div class="schedule-time">08:00–10:00</div>
             <div class="schedule-title">Утренняя практика</div>
             <div class="schedule-desc">Завершающая практика у океана.</div>
-            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1509684420792-749974015823?w=3840?w=800&h=320&fit=crop&q=80h=1536?w=800&h=320&fit=crop&q=80fit=crop?w=800&h=320&fit=crop&q=80q=95" alt="Практика у океана" loading="lazy">
+            <img class="activity-photo-wide" src="https://images.unsplash.com/photo-1509684420792-749974015823?w=3840&h=1536&fit=crop&q=95" alt="Практика у океана" loading="lazy">
           </div>
           <div class="schedule-item">
             <div class="schedule-time">10:00–11:00</div>
@@ -1844,15 +1843,15 @@ section {
     <!-- Villa Dada -->
     <div class="villa-card">
       <div class="villa-gallery" data-gallery="dada">
-        <div class="villa-gallery-main" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/49881798-6289-43-TCiMH')" onclick="openLightbox('dada', 0)">
-          <span class="villa-gallery-count" onclick="event.stopPropagation(); openLightbox('dada', 0)">40 фото</span>
+        <div class="villa-gallery-main" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_1200,h_800,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/49881798-6289-43-TCiMH')">
+          <span class="villa-gallery-count">40 фото</span>
           <div class="villa-image-label">Убуд &bull; Джунгли</div>
         </div>
         <div class="villa-gallery-grid">
-          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/0d722985-c308-40-GrAVi')" onclick="openLightbox('dada', 1)"></div>
-          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/cec78bde-12d6-4a-A1SpY')" onclick="openLightbox('dada', 2)"></div>
-          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/a823d691-9f1b-4e-KpHf6')" onclick="openLightbox('dada', 3)"></div>
-          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/28403edd-5156-4b-6Cjyr')" onclick="openLightbox('dada', 4)"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/0d722985-c308-40-GrAVi')"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/cec78bde-12d6-4a-A1SpY')"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/a823d691-9f1b-4e-KpHf6')"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://assets.guesty.com/image/upload/c_fill,w_720,h_480,q_80/listing_images_s3/production/property-photos/37f7ddd453308192cf43238e05e134856084c1d6589fdb95/67d8eeb285a96400137d6806/28403edd-5156-4b-6Cjyr')"></div>
         </div>
       </div>
       <div class="villa-body">
@@ -1875,15 +1874,15 @@ section {
     <!-- Chandidasa Villa -->
     <div class="villa-card">
       <div class="villa-gallery" data-gallery="manis">
-        <div class="villa-gallery-main" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1527684604442-XPQZ268VFG87XYLVSBHE/DJI_0299.JPG?format=2500w')" onclick="openLightbox('manis', 0)">
-          <span class="villa-gallery-count" onclick="event.stopPropagation(); openLightbox('manis', 0)">30+ фото</span>
+        <div class="villa-gallery-main" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1527684604442-XPQZ268VFG87XYLVSBHE/DJI_0299.JPG?format=2500w')">
+          <span class="villa-gallery-count">30+ фото</span>
           <div class="villa-image-label">Чандидаса &bull; Океан</div>
         </div>
         <div class="villa-gallery-grid">
-          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791047463-5LO7UJ8U1VG3QNP1ZV09/1.jpg?format=2500w')" onclick="openLightbox('manis', 1)"></div>
-          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790939210-IYR2ES4GS3ZLGA3PI2O0/2.jpg?format=2500w')" onclick="openLightbox('manis', 2)"></div>
-          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790967890-P293THD7NFSM6DF12X8L/3.jpg?format=2500w')" onclick="openLightbox('manis', 3)"></div>
-          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791002383-1UDA2N68FNVC8V2JI0YK/4.JPG?format=2500w')" onclick="openLightbox('manis', 4)"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791047463-5LO7UJ8U1VG3QNP1ZV09/1.jpg?format=2500w')"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790939210-IYR2ES4GS3ZLGA3PI2O0/2.jpg?format=2500w')"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648790967890-P293THD7NFSM6DF12X8L/3.jpg?format=2500w')"></div>
+          <div class="villa-gallery-thumb" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ae18765f93fd4f365d27a0b/1648791002383-1UDA2N68FNVC8V2JI0YK/4.JPG?format=2500w')"></div>
         </div>
       </div>
       <div class="villa-body">
